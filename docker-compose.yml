@@ -1,0 +1,17 @@
+services:
+  selenium:
+    image: selenium/standalone-chrome:125.0-20240522
+    shm_size: 2gb
+    ports:
+      - 4444:4444
+      - 7900:7900
+
+  python:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/home
+    tty: true
+    depends_on:
+      - selenium
