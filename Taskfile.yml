@@ -1,0 +1,19 @@
+version: "3"
+
+tasks:
+  build:
+    cmds:
+      - docker compose build --no-cache
+    silent: true
+  up:
+    cmds:
+      - docker compose up -d
+    silent: true
+  down:
+    cmds:
+      - docker compose down
+    silent: true
+  run:
+    cmds:
+      - docker compose exec -it python python ./src/main.py
+    silent: true
