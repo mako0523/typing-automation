@@ -7,7 +7,9 @@
     "isort",
     "mypy"
   ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
   "editor.defaultFormatter": null,
-  "editor.formatOnSave": true,
-  "python.analysis.typeCheckingMode": "strict"
+  "editor.formatOnSave": true
 }
