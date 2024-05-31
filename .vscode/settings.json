@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["aiueo", "isort", "mypy"]
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "cSpell.words": [
+    "aiueo",
+    "isort",
+    "mypy"
+  ],
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": true,
+  "python.analysis.typeCheckingMode": "strict"
 }
