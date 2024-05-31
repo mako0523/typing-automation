@@ -13,6 +13,20 @@ tasks:
     cmds:
       - docker compose down
     silent: true
+  shell:
+    cmds:
+      - docker compose exec -it python sh
+    silent: true
+  lint:
+    cmds:
+      - docker compose exec -it python flake8 ./src/
+      - docker compose exec -it python mypy ./src/
+    silent: true
+  format:
+    cmds:
+      - docker compose exec -it python isort ./src/
+      - docker compose exec -it python black ./src/
+    silent: true
   run:
     cmds:
       - docker compose exec -it python python ./src/main.py
